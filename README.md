@@ -7,8 +7,7 @@
 - 中文名：方块圣域。
 - 英文名：Minecraft Seeker Horizon Block Sanctuary。
 - `YOUR-REALM-CODE`：改成你的 Realm 邀请代码，或改成“审核后私发”。
-- `把这里改成你的 QQ / 微信 / Discord 联系方式`：改成真实联系方式。
-- `https://discord.com/`：改成你的群链接。
+- QQ 群号：1103937184。
 
 ## 让别人远程打开
 

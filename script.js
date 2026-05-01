@@ -15,9 +15,9 @@ copyButtons.forEach((button) => {
     const text = button.dataset.copy || "";
     try {
       await navigator.clipboard.writeText(text);
-      showToast("已复制 Realm 代码");
+      showToast("已复制 Realm 链接");
     } catch {
-      showToast("浏览器不允许复制，请手动选择代码");
+      showToast("浏览器不允许复制，请手动选择链接");
     }
   });
 });

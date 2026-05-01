@@ -392,6 +392,8 @@ h3 {
 
 .section,
 .split-section,
+.mods-section,
+.creator-section,
 .gallery-section {
   padding: 86px clamp(20px, 6vw, 84px);
   background: var(--panel);
@@ -403,54 +405,15 @@ h3 {
 }
 
 .section-heading .eyebrow,
-.split-section .eyebrow {
+.split-section .eyebrow,
+.creator-section .eyebrow {
   color: var(--leaf-dark);
 }
 
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.feature-card,
 .rules-list article,
 .realm-card {
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
-}
-
-.feature-card {
-  min-height: 270px;
-  padding: 24px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  overflow: hidden;
-  position: relative;
-}
-
-.feature-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.22;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.28) 1px, transparent 1px) 0 0 / 34px 34px,
-    linear-gradient(rgba(255, 255, 255, 0.28) 1px, transparent 1px) 0 0 / 34px 34px;
-}
-
-.feature-card h3,
-.feature-card p,
-.feature-card .icon-block {
-  position: relative;
-}
-
-.feature-card p {
-  margin-bottom: 0;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.7;
 }
 
 .icon-block {
@@ -459,22 +422,6 @@ h3 {
   margin-bottom: auto;
   background: rgba(255, 255, 255, 0.86);
   box-shadow: inset 0 -8px 0 rgba(0, 0, 0, 0.14);
-}
-
-.grass {
-  background: linear-gradient(160deg, #4da846, #1f6c43);
-}
-
-.prismarine {
-  background: linear-gradient(160deg, #39a3ad, #21636e);
-}
-
-.copper {
-  background: linear-gradient(160deg, #d88342, #8a4f2b);
-}
-
-.amethyst {
-  background: linear-gradient(160deg, #845ec2, #4a327f);
 }
 
 .split-section {
@@ -566,6 +513,95 @@ h3 {
   background: #fff;
 }
 
+.mods-section {
+  background: #101a14;
+  color: #fff;
+}
+
+.mods-section .section-heading {
+  max-width: 860px;
+}
+
+.mods-section .section-heading .eyebrow {
+  color: #ffd96a;
+}
+
+.mods-section .section-heading p:last-child {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.mods-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.mod-card {
+  min-height: 310px;
+  padding: 18px;
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)),
+    #18251d;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.mod-card h3 {
+  margin: 16px 0 8px;
+  font-size: 19px;
+  line-height: 1.18;
+}
+
+.mod-card p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.55;
+}
+
+.mod-size {
+  display: inline-flex;
+  margin-top: 16px;
+  padding: 5px 8px;
+  color: #102015;
+  font-size: 12px;
+  font-weight: 900;
+  background: #8de26d;
+}
+
+.mod-art {
+  display: block;
+  width: min(100%, 168px);
+  aspect-ratio: 1;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  background: #101a14;
+  border: 3px solid rgba(255, 255, 255, 0.82);
+  box-shadow: inset 0 -12px 0 rgba(0, 0, 0, 0.18);
+}
+
+.creator-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #eaf2e4;
+}
+
+.creator-section div {
+  max-width: 760px;
+}
+
+.creator-section p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
 .rules-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -584,6 +620,12 @@ h3 {
 
 .gallery-section .section-heading .eyebrow {
   color: #ffd96a;
+}
+
+.gallery-section .section-heading p:last-child {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .gallery-grid {
@@ -699,7 +741,7 @@ h3 {
     display: none;
   }
 
-  .feature-grid,
+  .mods-grid,
   .rules-list,
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -707,6 +749,11 @@ h3 {
 
   .split-section {
     grid-template-columns: 1fr;
+  }
+
+  .creator-section {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .portal {
@@ -738,7 +785,7 @@ h3 {
   }
 
   .quick-stats,
-  .feature-grid,
+  .mods-grid,
   .rules-list,
   .gallery-grid {
     grid-template-columns: 1fr;
