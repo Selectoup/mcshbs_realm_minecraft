@@ -1,10 +1,11 @@
-# 星屿 Realm 宣传页
+# 方块圣域宣传页
 
 这是一个纯静态网页，双击 `index.html` 可以本地预览，也可以直接部署到公网。
 
 ## 需要先修改的内容
 
-- `index.html` 里的 `星屿 Realm`：改成你的服务器名。
+- 中文名：方块圣域。
+- 英文名：Minecraft Seeker Horizon Block Sanctuary。
 - `YOUR-REALM-CODE`：改成你的 Realm 邀请代码，或改成“审核后私发”。
 - `把这里改成你的 QQ / 微信 / Discord 联系方式`：改成真实联系方式。
 - `https://discord.com/`：改成你的群链接。
